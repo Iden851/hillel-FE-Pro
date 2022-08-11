@@ -12,23 +12,23 @@ const someStr = "23 Serpnya";
 let i = 0;
 while (i < someStr.length) {
     i++;
-    let symbol = someStr[i - 1];
-    if (+symbol) {
-        symbol = "number";
+    let symbolOfStr = someStr[i - 1];
+    if (+symbolOfStr) {
+        symbolOfStr = "number";
     } else {
-        symbol = "string";
+        symbolOfStr = "string";
     }
-    console.log(symbol);
+    console.log(symbolOfStr);
 }
 
 for (i = 0; i < someStr.length; i++) {
-    let symbol = someStr[i];
-    if (+symbol) {
-        symbol = "number";
+    let symbolOfStr = someStr[i];
+    if (+symbolOfStr) {
+        symbolOfStr = "number";
     } else {
-        symbol = "string";
+        symbolOfStr = "string";
     }
-    console.log(symbol);
+    console.log(symbolOfStr);
 }
 
 // 3. написать цикл который будет на каждое число от 13 и до 3 выводить "odd", "even"
