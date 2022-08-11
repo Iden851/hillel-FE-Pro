@@ -37,9 +37,20 @@ for (i = 0; i < someStr.length; i++) {
 
 for (i = 13; i > 2; i--) {
     if (i % 2) {
-        symbolType = "even";
-    } else {
         symbolType = "odd";
+    } else {
+        symbolType = "even";
     }
-    console.log(i + symbolType);
+    console.log(i + " " + symbolType);
+}
+
+i = 14;
+while (i > 3) {
+    i--;
+    if (i % 2) {
+        symbolType = "odd";
+    } else {
+        symbolType = "even";
+    }
+    console.log(i + " " + symbolType);
 }
