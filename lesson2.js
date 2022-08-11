@@ -66,7 +66,7 @@ console.log((123 && "hi") || "hello"); // hi
 console.log(1 + 1); // 2
 
 // 11. '12' + '31'
-console.log("12" + "31"); // 1231
+console.log("12" + "31"); // '1231'
 
 // 12. 3 / '3'
 console.log(3 / "3"); // 1
