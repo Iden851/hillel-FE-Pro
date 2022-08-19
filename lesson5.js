@@ -89,7 +89,7 @@ console.log(heaviestCharacter);
 // 4. Вывести фильмы в которых присутствовали все персонажи массива
 
 let numberOfCharacters = starWarCharacters.length;
-console.log(numberOfCharacters);
+//console.log(numberOfCharacters);
 
 let allFilms = [];
 starWarCharacters.forEach((elem) => {
@@ -97,7 +97,7 @@ starWarCharacters.forEach((elem) => {
 });
 let allFilmsArr = allFilms.split(",");
 
-console.log(allFilmsArr);
+//console.log(allFilmsArr);
 
 function counterFilms(arr, copies) {
     let map = new Map();
