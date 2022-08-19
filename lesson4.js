@@ -86,7 +86,7 @@ usersArray.pop();
 console.log(usersArray);
 
 // 5) Удалить пользователя Isaac
-for (i = 0; i < usersArray.length; i++) {
+for (let i = 0; i < usersArray.length; i++) {
     if (usersArray[i].name === "Isaac") {
         usersArray.splice(i, 1);
     }
@@ -94,7 +94,7 @@ for (i = 0; i < usersArray.length; i++) {
 console.log(usersArray);
 
 // 6) Добавить пользователя Harry после John
-for (i = 0; i < usersArray.length; i++) {
+for (let i = 0; i < usersArray.length; i++) {
     if (usersArray[i].name === "John") {
         usersArray.splice(i + 1, 0, { name: "Harry", balance: "1000$" });
     }
@@ -172,14 +172,16 @@ let str1 = "искать такси";
 let str3 = "привет мир";
 let str2 = str1.split(" ").join("");
 let str4 = str3.split(" ").join("");
-for (i = 0; i < str2.length; i++) {
+let result1;
+let result2;
+for (let i = 0; i < str2.length; i++) {
     if (str2.charAt(i) === str2.charAt(str2.length - 1 - i)) {
         result1 = "true";
     } else {
         result1 = "false";
     }
 }
-for (i = 0; i < str4.length; i++) {
+for (let i = 0; i < str4.length; i++) {
     if (str4.charAt(i) === str4.charAt(str4.length - 1 - i)) {
         result2 = "true";
     } else {
