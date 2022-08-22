@@ -60,7 +60,7 @@ console.log(createUser("admin", "Bob"));
 // 5. должна принимать 'aabbbccccd' и возвращать '2a3b4c1d'
 
 function transformString(str) {
-    result = "";
+    let result = "";
     let strToArr = str.split("");
     console.log(strToArr);
     let count = {};
