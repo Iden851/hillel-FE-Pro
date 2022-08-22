@@ -25,10 +25,10 @@ function lenghtOfWords(...array) {
             result.push(elem.length);
         }
     });
-    console.log(result);
+
     return result;
 }
-lenghtOfWords("hi", "", "wow", null, ["I am not a string you are looking for"], "I am", 123);
+console.log(lenghtOfWords("hi", "", "wow", null, ["I am not a string you are looking for"], "I am", 123));
 
 // 3. вернуть количество гласных в строке 'Hello world' => 3
 
