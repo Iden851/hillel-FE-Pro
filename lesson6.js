@@ -20,7 +20,7 @@ function lenghtOfWords(...array) {
     let result = [];
 
     array.forEach((elem) => {
-        if (elem !== null && !Array.isArray(elem) && typeof "string" && elem.length) {
+        if (typeof elem === "string" && elem.length) {
             console.log(elem);
             result.push(elem.length);
         }
@@ -141,7 +141,7 @@ console.log(getHours("5 years"));
 // 10. обрезать слишком длинную строку trim('hello world', 3) => 'hel...'
 
 function trimString(string, length) {
-    let result = string.substr(0, length) + "...";
+    let result = `${string.substr(0, length)}...`;
     return result;
 }
 
