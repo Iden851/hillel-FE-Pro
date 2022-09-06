@@ -34,7 +34,7 @@ myMap.set("meat", 4);
 
 function convert(data) {
     let result;
-    if (data.size) {
+    if (data.size >= 0) {
         let obj = Object.fromEntries(data);
         result = obj;
     } else {
