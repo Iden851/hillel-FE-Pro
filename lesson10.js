@@ -32,16 +32,14 @@ myMap.set("banana", 1);
 myMap.set("orange", 2);
 myMap.set("meat", 4);
 
-function convert(data) {
+function convertMapWithObj(data) {
     let result;
     if (data.size >= 0) {
-        let obj = Object.fromEntries(data);
-        result = obj;
+        result = Object.fromEntries(data);
     } else {
-        let map = new Map(Object.entries(data));
-        result = map;
+        result = new Map(Object.entries(data));
     }
     return result;
 }
-console.log(convert(myObject));
-console.log(convert(myMap));
+console.log(convertMapWithObj(myObject));
+console.log(convertMapWithObj(myMap));
