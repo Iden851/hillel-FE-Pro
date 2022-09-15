@@ -24,7 +24,7 @@ function greetingFunc(name, time) {
     function sayHi() {
         return `Hi, ${name}!`;
     }
-    // setTimeout(sayHi, timeOut);
+    setTimeout(sayHi, timeOut);
     return sayHi();
 }
 console.log(greetingFunc("Den", "5 seconds"));
