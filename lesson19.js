@@ -25,6 +25,5 @@ wakeUp
     })
     .then((time) => {
         console.log(`Go to bed at ${time} o\`clock`);
-        return time;
     })
     .finally(() => console.log("Good night!"));
