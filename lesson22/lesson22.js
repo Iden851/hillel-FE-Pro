@@ -26,7 +26,7 @@ counts.forEach(counterFunc);
 // выделим цветом "woman"
 let woman1 = document.querySelectorAll("ul > li");
 for (let elem of woman1) {
-    if (elem.dataset.id == "woman") {
+    if (elem.dataset.id === "woman") {
         elem.style.background = "lime";
     }
 }
