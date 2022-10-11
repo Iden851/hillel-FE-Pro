@@ -51,3 +51,7 @@ for (let elem of impotantInfo) {
 // ищем елемент с "Важной информацией" и выводим содержимое в консоль
 let impotantInfo1 = document.querySelector("div");
 console.log(impotantInfo1.innerHTML);
+
+// ищем елемент с "Важной информацией" и выводим содержимое в консоль
+let impotantInfo2 = document.getElementsByTagName("div")[0];
+console.log(impotantInfo1.innerHTML);
