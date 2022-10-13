@@ -17,14 +17,15 @@ div.style.cssText = `color: lime;
     justify-content: center;
     padding-top: calc(25% - 40px);
   `;
-let colors = ["grey", "yellow", "red", "blue"];
+let colors = ["grey", "yellow", "red", "blue", "Pink", "Violet", "Indigo", "Salmon", "Coral", "Green", "Aqua", "Olive"];
 function random(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 async function showMessage() {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 10; i++) {
         const color = new Promise((resolve) => {
-            setTimeout(() => resolve((div.style.color = colors[random(0, 3)])), 10 * 1000);
+            setTimeout(() => resolve((div.style.color = colors[random(0, colors.length - 1)])), 3 * 1000);
+            // сделал изменение цвета каждые 3 секунды вместо 10
         });
         await color;
     }
