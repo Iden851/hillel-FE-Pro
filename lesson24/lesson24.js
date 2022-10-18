@@ -48,3 +48,6 @@ let square = document.querySelector(".square");
 square.addEventListener("mouseover", () => {
     square.style.background = "red";
 });
+square.addEventListener("mouseout", () => {
+    square.style.background = "blue";
+});
