@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+.btn,
+.count {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid grey;
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  margin-left: 50px;
+  background: aqua;
+}
+
+.activator {
+  background: aqua;
+}
+
+.activator:hover,
+.save:hover {
+  background: lightgray;
+}
+
+.number {
+  margin-left: 20px;
+  margin-right: 40px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.square-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 50px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: blue;
+}
