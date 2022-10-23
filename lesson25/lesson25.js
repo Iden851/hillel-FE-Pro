@@ -2,21 +2,17 @@
 // квадрат который можно перемещать по странице с помощью Drag'n'Drop
 // при двойному нажатию на квадрат он будет центрироваться по середине экрана
 
-// Центрирование квадрата
+const square = document.querySelector(".square");
 const wrapper = document.querySelector("body");
-let centeredSquare = document.querySelector("div");
-centeredSquare.addEventListener("dblclick", () => {
-    wrapper.classList.toggle("center");
-});
 
 // Перемещение квадрата
-square.addEventListener("mousedown", (event) => {
+
+square.onmousedown = function (event) {
     let shiftX = event.clientX - square.getBoundingClientRect().left;
     let shiftY = event.clientY - square.getBoundingClientRect().top;
 
     square.style.position = "absolute";
     square.style.zIndex = 1000;
-    document.body.append(square);
 
     moveAt(event.pageX, event.pageY);
     function moveAt(pageX, pageY) {
@@ -31,8 +27,15 @@ square.addEventListener("mousedown", (event) => {
         document.removeEventListener("mousemove", onMouseMove);
         square.onmouseup = null;
     };
-});
-
+};
 square.ondragstart = function () {
     return false;
 };
+
+// Центрирование квадрата
+
+square.addEventListener("dblclick", moveToCenter);
+function moveToCenter() {
+    square.style.position = "static";
+    wrapper.classList.add("center");
+}
