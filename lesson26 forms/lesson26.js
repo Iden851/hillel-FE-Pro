@@ -8,7 +8,7 @@
 // попасть строка "test Hello world"
 
 // Сделал "контейнер" для сбора полученных сообщений
-function getMassege() {
+function getMessage() {
     const inputTaker = input.value;
     messages.innerHTML += inputTaker + "\n";
     input.value = null;
