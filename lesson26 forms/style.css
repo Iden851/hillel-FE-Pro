@@ -1,0 +1,15 @@
+.wrapper,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: lightgrey;
+}
+.wrapper {
+  height: 100vh;
+}
+#messages,
+.btn {
+  margin-bottom: 30px;
+}
