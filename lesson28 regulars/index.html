@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h2>Вариант 1</h2>
+                <form onsubmit="checkFormatPhone();return false">
+                    <div class="inputPhone">
+                        <p>Введите номер телефона в формате +3806711222</p>
+                        <input id="phoneNumber" type="text" value="" autofocus required />
+                    </div>
+
+                    <input id="checkBtn" type="submit" value="Проверить" />
+                </form>
+                <h2>Вариант 2</h2>
+                <form>
+                    <div class="inputPhone">
+                        <p>Введите номер телефона в формате +3806711222</p>
+                        <input id="phoneNumberVar2" type="text" value="" required />
+                    </div>
+                </form>
+            </section>
+            <section>
+                Введите HTML <textarea id="inputHtml" cols="30" rows="10"></textarea> Результат
+                <textarea id="withoutTags" cols="30" rows="10"></textarea>
+            </section>
+        </main>
+        <script src="./lesson28.js"></script>
+    </body>
+</html>
