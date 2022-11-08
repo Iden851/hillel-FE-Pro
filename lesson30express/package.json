@@ -1,0 +1,14 @@
+{
+  "name": "lesson30express",
+  "version": "1.0.0",
+  "description": "my project",
+  "main": "lesson30.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denys Ivanov",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
