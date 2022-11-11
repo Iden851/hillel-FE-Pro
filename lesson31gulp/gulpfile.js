@@ -25,7 +25,7 @@ function js(cb) {
     src(`${origin}/*.js`)
         .pipe(
             babel({
-                presets: ["@babel/env"],
+                presets: ["@babel/preset-env"],
             })
         )
         .pipe(dest(destination));

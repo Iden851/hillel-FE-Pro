@@ -2,22 +2,21 @@
   "name": "lesson31gulp",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^7.0.1",
-    "gulp-clean": "^0.4.0"
-  },
+  "main": "lesson31gulp",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
   "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
     "browser-sync": "^2.27.10",
     "del": "^6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1"
   }
 }
