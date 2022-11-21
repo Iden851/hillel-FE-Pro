@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "./components/common/header/Header";
-import Footer from "./components/common/footer/Footer";
-import Main from "./components/common/main/Main";
+import { Header, Main, Footer } from "./components/common";
 import "./App.css";
 
 function App() {
