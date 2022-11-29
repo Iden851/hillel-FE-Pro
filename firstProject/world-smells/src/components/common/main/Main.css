@@ -1,9 +1,26 @@
 .Main-site {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 70px;
-  height: 200px;
+  justify-content: space-around;
+  min-height: 200px;
   font-size: 30px;
   color: #5e3803;
+  margin-bottom: 30px;
+}
+
+.Main-site p {
+  width: 100px;
+  height: 20px;
+  color: black;
+}
+
+.left-section div,
+.right-section div {
+  width: 600px;
+  font-size: 15px;
+  display: flex;
+}
+
+.left-section div p,
+.right-section div p {
+  width: 300px;
 }

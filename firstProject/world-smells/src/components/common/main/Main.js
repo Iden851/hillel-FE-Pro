@@ -1,10 +1,12 @@
 import "./Main.css";
+import LeftSection from "../left-section/LeftSection";
+import RightSection from "../right-section/RightSection";
 
 function Main() {
     return (
         <div className="Main-site">
-            <div>Very soon!</div>
-            <div>You can buy a smell to move to any corner of the planet!!!!</div>
+            <LeftSection />
+            <RightSection />
         </div>
     );
 }
