@@ -1,0 +1,44 @@
+.Header-site {
+  background: #1b8bc5;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.logo-text {
+  margin: 20px 100px;
+  font-style: italic;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: #cdcac6;
+  font-size: 40px;
+}
+
+.Header-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+}
+
+.Header-nav li {
+  display: inline-block;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.Header-nav a {
+  text-decoration: none;
+  color: #3a4c55;
+  font-size: 20px;
+}
+
+.Header-nav a:hover,
+.Header-nav li:last-child a:hover {
+  color: #cdcac6;
+}
+
+.Header-nav li:last-child a {
+  color: red;
+}

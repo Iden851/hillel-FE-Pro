@@ -1,0 +1,47 @@
+.Main-site {
+  display: flex;
+  min-height: 500px;
+  margin-bottom: 30px;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.section div {
+  font-size: 15px;
+  display: flex;
+}
+
+.itemWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border: 5px solid #1b8bc5;
+  border-radius: 20px;
+}
+
+.itemWrapper p {
+  text-align: center;
+  width: 200px;
+}
+
+.itemWrapper img {
+  width: 200px;
+  height: 200px;
+}
+
+.itemName {
+  min-height: 50px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,5 +1,5 @@
 import "../main/Main.css";
-import { Component } from "react";
+import React, { Component } from "react";
 import Spinner from "../spinner/Spinner";
 
 class RightSection extends Component {
@@ -13,13 +13,13 @@ class RightSection extends Component {
     }
 
     componentDidMount() {
-        fetch("https://swapi.dev/api/starships/")
+        fetch("https://fakestoreapi.com/products/")
             .then((response) => response.json())
             .then(
                 (data) => {
                     this.setState({
                         isLoaded: true,
-                        items: data.results,
+                        items: data,
                     });
                 },
                 (error) => {
@@ -31,7 +31,15 @@ class RightSection extends Component {
             );
     }
 
+    // handleClick = (item) => {
+
+    //     chosen.push(item);
+    //     console.log(chosen);
+    //     return chosen;
+    // };
+
     render() {
+        const chosen = [];
         const { error, isLoaded, items } = this.state;
         if (error) {
             return <p> Error {error.message} </p>;
@@ -40,12 +48,36 @@ class RightSection extends Component {
         } else {
             return (
                 <div className="right-section">
-                    <h3>Starships costs (from swapi.dev)</h3>
-
+                    <h3>Some items costs (from fakestoreapi.com)</h3>
+                    <div className="selectedList">
+                        {chosen.map((item) => (
+                            <div className="itemWrapper" key={item.id}>
+                                <img src={item.image} alt="" />
+                                <p className="itemName" title="name">
+                                    {item.title}
+                                </p>
+                                <p className="itemPrice" title="price">
+                                    {item.price}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
                     {items.map((item) => (
-                        <div key={item.name}>
-                            <p title="name">{item.name}</p>
-                            <p title="cost in credits">{item.cost_in_credits}</p>
+                        <div
+                            className="itemWrapper"
+                            key={item.id}
+                            onClick={(item) => {
+                                chosen.push(item);
+                                console.log(chosen);
+                            }}
+                        >
+                            <img src={item.image} alt="" />
+                            <p className="itemName" title="name">
+                                {item.title}
+                            </p>
+                            <p className="itemPrice" title="price">
+                                {item.price}
+                            </p>
                         </div>
                     ))}
                 </div>

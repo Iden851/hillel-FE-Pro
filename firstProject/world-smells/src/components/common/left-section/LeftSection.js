@@ -9,7 +9,9 @@ function LeftSection() {
             {StarShips.results.map((item) => (
                 <div>
                     <p title="name">{item.name}</p>
-                    <p title="cost in credits">{item.cost_in_credits}</p>
+                    <p className="itemPrice" title="cost in credits">
+                        {item.cost_in_credits}
+                    </p>
                 </div>
             ))}
         </div>
