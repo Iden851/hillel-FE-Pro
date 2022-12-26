@@ -46,5 +46,8 @@
 }
 
 .selectedList {
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  font-size: 15px;
 }

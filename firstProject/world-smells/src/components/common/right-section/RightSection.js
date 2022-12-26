@@ -9,6 +9,7 @@ class RightSection extends Component {
             error: null,
             isLoaded: false,
             items: [],
+            chosen: [],
         };
     }
 
@@ -31,16 +32,12 @@ class RightSection extends Component {
             );
     }
 
-    // handleClick = (item) => {
-
-    //     chosen.push(item);
-    //     console.log(chosen);
-    //     return chosen;
-    // };
+    handleDeleteElem = (id) => {
+        this.setState((prevState) => ({ chosen: prevState.chosen.filter((elem) => elem.id !== id) }));
+    };
 
     render() {
-        const chosen = [];
-        const { error, isLoaded, items } = this.state;
+        const { error, isLoaded, items, chosen } = this.state;
         if (error) {
             return <p> Error {error.message} </p>;
         } else if (!isLoaded) {
@@ -48,16 +45,24 @@ class RightSection extends Component {
         } else {
             return (
                 <div className="right-section">
+                    {console.log(items)}
+                    {console.log(chosen)}
                     <h3>Some items costs (from fakestoreapi.com)</h3>
                     <div className="selectedList">
-                        {chosen.map((item) => (
-                            <div className="itemWrapper" key={item.id}>
-                                <img src={item.image} alt="" />
+                        {chosen.map((elem) => (
+                            <div
+                                className="itemWrapper"
+                                key={elem.id}
+                                onClick={() => {
+                                    this.handleDeleteElem(elem.id);
+                                }}
+                            >
+                                <img src={elem.image} alt="" />
                                 <p className="itemName" title="name">
-                                    {item.title}
+                                    {elem.title}
                                 </p>
                                 <p className="itemPrice" title="price">
-                                    {item.price}
+                                    {elem.price}
                                 </p>
                             </div>
                         ))}
@@ -67,8 +72,9 @@ class RightSection extends Component {
                             className="itemWrapper"
                             key={item.id}
                             onClick={(item) => {
-                                chosen.push(item);
-                                console.log(chosen);
+                                this.setState({ chosen: chosen.concat(item) });
+                                // console.log(item);
+                                // console.log(chosen);
                             }}
                         >
                             <img src={item.image} alt="" />
